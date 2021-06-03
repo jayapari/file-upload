@@ -1,0 +1,61 @@
+<div class="container">
+    <h2>UPLOAD NOTICE</h2>
+<form [formGroup]="uploadform" (ngSubmit)="onSubmit()">
+    <table>
+        <tr>
+            <div class="form-group">
+            <td><label for="notice_id">NOTICE ID</label></td>
+            <td><input type="text" id="notice_id" formControlName="notice_id" class="form-control" placeholder="notice_id">
+            </td>
+        </div>
+        </tr>
+        <tr>
+            <div class="form-group">
+            <td> <label for ="notice_title"> ENTER TITLE OF NOTICE</label></td>
+            <td><input type="text" id ="notice_title" formControlName="notice_title" class="form-control" placeholder="enter title of notice">
+            </td>
+        </div>
+        </tr>
+        <tr>
+            <div class="form-group">
+            <td> <label for ="notice_upload_date">UPLOAD DATE</label></td>
+            <td><input type="date" id ="notice_upload_date" class="form-control" formControlName="notice_upload_date" placeholder="enter upload date">
+            </td>
+        </div>
+        </tr>
+        <tr>
+            <div class="form-group">
+            <td> <label for ="notice_expiray_date">EXPIRAY DATE</label></td>
+            <td><input type="date" id ="notice_expiray_date" class="form-control" formControlName="notice_expiray_date" placeholder="enter expiray date">
+            </td>
+        </div>
+        </tr>
+        <tr>
+            <div class="form-group">
+            <td> <label for ="keywords">ENTER KEYWORDS</label></td>
+            <td><input type="text" id ="keywords" class="form-control" formControlName="keywords" placeholder="enter keywords for search">
+            </td>
+        </div>
+        </tr>
+        <tr>
+            <div class="form-group">
+            <td><label for="notice_circular_file">Choose File</label></td>
+            <td><input type="file" id="notice_circular_file" class="form-control" (change)="onFileSelected($event)" #fileInput acccept=".pdf">
+            </td>
+            <td><div class="progress-bar bg-success" style="width:20px;"></div></td>
+        </div>
+        </tr>
+        <tr>
+            <!-- <td> <button type="button" (click)="fileInput.click()"> PICK FILE</button></td> -->
+            <td><button class=" btn btn-primary" type="button" (click)="onSubmit()">UPLOAD</button>
+			</td>
+        </tr>
+
+    </table>
+</form>
+</div>
+<div><br>
+    <br>
+    <br> <br> <br>
+    <br> <br>
+    <br></div>
